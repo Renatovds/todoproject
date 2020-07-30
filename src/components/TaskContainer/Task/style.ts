@@ -1,24 +1,59 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+import { shade } from 'polished';
 
 interface ContainerProps {
   checked: boolean;
 }
-export const Container = styled.div<ContainerProps>`
+// #59a36a
+const checkAnimated = keyframes`
 
-height:80px;
+to {
+  stroke-dashoffset:0;
+}
+from{
+  stroke-dashoffset:-22;
+}
+`;
+export const Container = styled.div<ContainerProps>`
+position:relative;
+flex:1;
+max-height:80px;
 padding:16px;
 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
 border-radius:10px;
 display:flex;
 align-items:center;
-background-color:transparent;
+background:transparent;
 margin:0 5px;
+border:0;
+transition: background-color 0.2s;
 
 
-p{
+input{
+  word-wrap:normal;
   font-size:20px;
+  flex:1;
+  margin-right:12px;
+  background-color:transparent;
+  outline:0;
+  border:0;
+  color: #222;
 }
 
+ > button{
+  position:absolute;
+   top:-2px;
+   right:-2px;
+   margin:10px 15px 10px 15px;
+
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  border:0;
+  background-color:transparent;
+
+
+}
 
 
 & + div{
@@ -40,28 +75,43 @@ button{
   border:0;
   background-color:transparent;
 
-svg{
+  svg{
   position:relative ;
+  color: #222;
+
 
 }
 }
-
 }
+
+
 ${(props) => props.checked === true
-    && css` border: solid 2px #59a36a;
-     color: #59a36a;
+    && css`
+     color: #222;
+        #checkIcon {
+        stroke-width:2;
+        stroke-dasharray:23;
+     }
      svg {
-       color: #59a36a;
-     };
-     p {
+       color: #222;
+     }
+     animation: ${checkAnimated} 1s linear ;
+     :hover {
+      background-color:${shade(0.2, '#59a36a')};
+
+    }
+     input {
        opacity:0.6;
      }`
 }
 ${(props) => props.checked === false
-    && css` border: solid 2px #af120d;
+    && css`
+    :hover {
+      background:${shade(0.2, '#413754')};
+    }
      color: #af120d;
      svg {
-       color: #af120d;
+       color: #E9e8e9;
      }`
 }
 

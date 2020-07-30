@@ -1,22 +1,32 @@
 import React from 'react';
-import { Container } from './styles';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Container, Background } from './styles';
 import Input from '../../components/Input';
 import Content from '../../components/Content';
 import TaskContainer from '../../components/TaskContainer';
+import TaskFilter from '../../components/TaskFilter';
 import { useTask } from '../../hooks/taskData';
+import NoteBook from '../../components/NoteBook';
 
 const Main: React.FC = () => {
-  const { toDos } = useTask();
+  const { tasks, filterTasks } = useTask();
   return (
 
     <Container>
-      <h1>To do List</h1>
-
-      <Content>
+      <Background>
+        <h1>To do List</h1>
         <Input />
+      </Background>
+      <BrowserRouter>
+        <NoteBook>
+          <Switch>
+            <Route path="/" exact render={() => TaskContainer({ toDos: tasks })} />
+            <Route path="/finished" render={() => <TaskContainer toDos={filterTasks({ type: 'finished' })} />} />
+            <Route path="/unfinished" render={() => <TaskContainer toDos={filterTasks({ type: 'unfinished' })} />} />
+          </Switch>
+        </NoteBook>
 
-      </Content>
-      <TaskContainer toDos={toDos} />
+      </BrowserRouter>
 
     </Container>
   );

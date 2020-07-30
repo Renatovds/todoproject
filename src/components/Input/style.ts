@@ -6,14 +6,15 @@ height:80px;
 padding:16px;
 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
 border-radius:10px;
-border: solid 2px #aaaaaa;
-display:flex;
-align-content:center;
-background-color:transparent;
-margin:0 10px;
-color: #eeaa66;
 
-form{
+display:flex;
+justify-content:center;
+background:linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);
+margin:20px;
+color: #eeaa66;
+max-width: 700px;
+
+form {
   display:flex;
   flex:1;
 }
@@ -25,11 +26,10 @@ input{
   background:transparent;
   border:0;
   font-size:20px;
-  color: #eeaa66;
   align-items:center;
 ::placeholder {
-color: #aaaaaa;;
-opacity:0.7;
+
+opacity:0.8;
 }
 }
 `;
