@@ -1,15 +1,15 @@
 import styled from 'styled-components';
-import backimg from '../../assets/notepad.svg';
 
 const NoteBook = styled.div`
 
+padding-right:22px;
+padding-top: 120px;
 width: 700px;
 height:100vh;
-padding-top: 120px;
-padding-right:22px;
 padding-left:22px;
+margin:0;
 
-background: url( ${backimg}) no-repeat;
-background-size: cover;
+border-bottom:solid 2px #000;
+
 `;
 export default NoteBook;

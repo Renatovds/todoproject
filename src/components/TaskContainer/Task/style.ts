@@ -19,13 +19,12 @@ position:relative;
 flex:1;
 max-height:80px;
 padding:16px;
-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-border-radius:10px;
 display:flex;
 align-items:center;
 background:transparent;
 margin:0 5px;
-border:0;
+border-bottom:1px solid #222;
+
 transition: background-color 0.2s;
 
 
@@ -56,9 +55,7 @@ input{
 }
 
 
-& + div{
-  margin-top:10px;
-}
+
 
 div {
 
@@ -91,6 +88,7 @@ ${(props) => props.checked === true
         #checkIcon {
         stroke-width:2;
         stroke-dasharray:23;
+        color: #59a36a;
      }
      svg {
        color: #222;
