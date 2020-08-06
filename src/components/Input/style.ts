@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 
-height:80px;
+height:70px;
 padding:16px;
-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
 border-radius:10px;
 
 display:flex;

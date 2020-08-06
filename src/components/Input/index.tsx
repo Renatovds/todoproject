@@ -12,6 +12,7 @@ const Input:React.FC = () => {
       const task = {
         id: v4(),
         toDo: inputRef.current.value,
+        createdAt: new Date(),
 
       };
       setTask(task);

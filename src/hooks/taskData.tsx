@@ -5,12 +5,15 @@ import React, {
 export interface TaskDataProps {
   id: string;
   toDo: string;
+  createdAt:Date;
+  finishedAt?:Date;
   checked?: boolean;
 }
+
 interface TaskContextProps {
   tasks: TaskDataProps[];
   setTask(data: TaskDataProps): void;
-  setChecked(data: TaskDataProps): void;
+  updateTask(data: TaskDataProps): void;
   removeTask(id: string): void;
   filterTasks(type: FilterTasksTypes): TaskDataProps[];
 }
@@ -39,15 +42,16 @@ export const TaskData: React.FC = ({ children }) => {
     setData((state) => [...state, task]);
   }, []);
 
-  const setChecked = useCallback((task: TaskDataProps) => {
-    const newData = data;
-    newData.forEach((element) => {
+  const updateTask = useCallback((task: Omit<TaskDataProps, 'createdAt'>) => {
+    const taskData = data;
+    taskData.forEach((element) => {
       if (element.id === task.id) {
         element.checked = task.checked;
         element.toDo = task.toDo;
+        element.finishedAt = task.finishedAt;
       }
     });
-    setData(newData);
+    setData(taskData);
   }, [data, setData]);
 
   const removeTask = useCallback((id: string) => {
@@ -68,7 +72,7 @@ export const TaskData: React.FC = ({ children }) => {
 
   return (
     <TaskContext.Provider value={{
-      tasks: data, setTask, setChecked, removeTask, filterTasks,
+      tasks: data, setTask, updateTask, removeTask, filterTasks,
     }}
     >
       {children}

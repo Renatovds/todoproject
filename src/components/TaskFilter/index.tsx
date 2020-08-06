@@ -1,12 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link, useRouteMatch } from 'react-router-dom';
 import { Container } from './style';
 import Button from '../Button';
 
+interface ButtonProps{
+  to:string;
+  label:string;
+  exact?:boolean;
+}
+
+const CustomLink:React.FC<ButtonProps> = ({ to, label, exact }) => {
+  const match = useRouteMatch({ path: to, exact });
+  return (
+    <Button as={Link} to={to} className={match ? 'active' : ''}>
+      {label}
+    </Button>
+  );
+};
+
 const FilterTask:React.FC = () => (
+
   <Container>
-    <Button to="/"> Todos </Button>
-    <Button to="/finished"> Concluido </Button>
-    <Button to="unfinished"> Pendente </Button>
+
+    <CustomLink to="/" label="Todos" exact />
+    <CustomLink to="/finished" label="Concluidos" />
+    <CustomLink to="/unfinished" label="Pendentes" />
 
   </Container>
 );

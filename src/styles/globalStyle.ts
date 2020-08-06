@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import background from '../assets/backgroundimg.svg';
 
 export default createGlobalStyle`
 *{
@@ -10,7 +11,11 @@ export default createGlobalStyle`
 
 }
 body {
-  background:#fff;
+display:flex;
+flex:1;
+  background:url(${background});
+  background-size: cover;
+
   color: #12102e;
   -webkit-font-smoothing:antialiased;
 

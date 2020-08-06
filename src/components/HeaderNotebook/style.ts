@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 
 export const Header = styled.div`
+position:relative;
+top:0;
 display:flex;
 flex:1;
 flex-direction:row;
-height: 80px;
+max-height:80px;
+min-height:80px;
+
 justify-content:space-around;
 align-items:center;
-padding-bottom:10px;
-border-right:solid 3px #000;
-border-left:solid 3px #000;
-border-top:solid 3px #000;
+padding-bottom:15px;
+padding-top:10px;
+
 border-radius:5px;
 
 `;
@@ -19,16 +22,19 @@ display:flex;
 height:25px;
 width:25px;
 justify-content:center;
-border:solid 3px #000;
+border:solid 1px #888;
 border-radius:50px;
+background-image: radial-gradient(circle, #fafafa, #333, #777);
 
 `;
 export const Wire = styled.div`
 position:relative;
-height:50px;
-width:10px;
-top:-35px ;
-border:solid 3px #000;
+height:60px;
+width:8px;
+top:-48px ;
+margin-right:1px;
+
 border-radius:10px;
-background-color:#fff;
+background-image: radial-gradient(circle, #ddd , #333,#000);
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
 `;

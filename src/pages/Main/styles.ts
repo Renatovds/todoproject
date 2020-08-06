@@ -1,36 +1,51 @@
 import styled from 'styled-components';
-import imgBackground from '../../assets/background.png';
 
 export const Container = styled.div`
 display:flex;
+flex:1;
 height:100vh;
+width:100vw;
 flex-direction:row;
-justify-content:flex-start;
-align-items:center;
-@media (max-width: 750px) {
+justify-content:center;
 
-  flex-direction:column;
-  height: 300px;
+@media (max-width: 770px) {
+
+width:100vw;
+flex-direction:column;
+
+h1{
+  padding-top:25px;
+}
+#notebook{
+  width:100vw;
+  justify-content:center;
+
+    div{
+      max-width:95vw;
+    }
 }
 
+}
 
 `;
 
 export const Background = styled.div`
-background:url(${imgBackground}) no-repeat;
-background-size: cover;
-height:100vh;
-flex:1;
-
-
+display:flex;
+flex-direction:column;
+width:100vw;
+margin-top:20px;
+padding:5px;
+justify-content:center;
+align-items:center;
 h1 {
+  margin:5px;
+  padding-bottom:10px;
   display:flex;
   flex:1;
   justify-content:center;
+  color: #f6f6f6;
 }
 
-div{
-  flex:1;
-  justify-content:center;
-}
+
+
 `;
