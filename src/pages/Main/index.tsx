@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { FaGithub } from 'react-icons/fa';
 import { Container, Background } from './styles';
 import TaskContainer from '../../components/TaskContainer';
 import { useTask } from '../../hooks/taskData';
@@ -22,6 +23,11 @@ const Main: React.FC = () => {
             </Switch>
 
           </NoteBook>
+          <footer>
+            made by:
+            {' '}
+            <FaGithub size={40} />
+          </footer>
         </Background>
       </BrowserRouter>
 

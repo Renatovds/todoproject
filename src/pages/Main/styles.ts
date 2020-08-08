@@ -24,8 +24,19 @@ h1{
       max-width:95vw;
     }
 }
+footer {
+  position:absolute;
+  right:10px;
+  top: 10px;
+  height:8px;
+  font-size:12px;
 
+  svg{
+    max-inline-size:20px;
+  }
 }
+}
+
 
 `;
 
@@ -37,6 +48,7 @@ margin-top:20px;
 padding:5px;
 justify-content:center;
 align-items:center;
+
 h1 {
   margin:5px;
   padding-bottom:10px;
@@ -46,6 +58,13 @@ h1 {
   color: #f6f6f6;
 }
 
+footer {
+  position:absolute;
+  right:20px;
+  top: 10px;
+
+
+}
 
 
 `;

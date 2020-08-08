@@ -30,11 +30,11 @@ background-image: radial-gradient(circle, #fafafa, #333, #777);
 export const Wire = styled.div`
 position:relative;
 height:60px;
-width:8px;
+width:9px;
 top:-48px ;
 margin-right:1px;
 
 border-radius:10px;
-background-image: radial-gradient(circle, #ddd , #333,#000);
+background-image: radial-gradient(circle, #ddd , #333,#111);
 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
 `;

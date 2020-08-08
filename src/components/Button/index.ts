@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { shade } from 'polished';
 
 const Container = styled(Link)`
 color: #000;

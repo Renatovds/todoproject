@@ -7,7 +7,6 @@ export interface TaskDataProps {
   toDo: string;
   createdAt:Date;
   finishedAt?:Date;
-  checked?: boolean;
 }
 
 interface TaskContextProps {
@@ -46,7 +45,6 @@ export const TaskData: React.FC = ({ children }) => {
     const taskData = data;
     taskData.forEach((element) => {
       if (element.id === task.id) {
-        element.checked = task.checked;
         element.toDo = task.toDo;
         element.finishedAt = task.finishedAt;
       }
@@ -61,10 +59,10 @@ export const TaskData: React.FC = ({ children }) => {
 
   const filterTasks = useCallback(({ type = 'all' }: FilterTasksTypes) => {
     if (type === 'finished') {
-      return data.filter((task) => task.checked);
+      return data.filter((task) => task.finishedAt);
     }
     if (type === 'unfinished') {
-      return data.filter((task) => !task.checked);
+      return data.filter((task) => !task.finishedAt);
     }
 
     return data;

@@ -23,7 +23,7 @@ const FilterTask:React.FC = () => (
   <Container>
 
     <CustomLink to="/" label="Todos" exact />
-    <CustomLink to="/finished" label="Concluidos" />
+    <CustomLink to="/finished" label="Concluídos" />
     <CustomLink to="/unfinished" label="Pendentes" />
 
   </Container>

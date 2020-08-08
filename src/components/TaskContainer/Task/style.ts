@@ -1,5 +1,4 @@
 import styled, { css, keyframes } from 'styled-components';
-import { shade } from 'polished';
 
 interface ContainerProps {
   checked: boolean;
@@ -36,18 +35,18 @@ export const Container = styled.div<ContainerProps>`
     color: #222;
     font-size:20px;
     flex:1;
+    flex-wrap:inherit;
 
     outline:0;
     margin-right:20px
   }
 
 
-
 div {
 
   align-items:center;
   display:flex;
-  padding-right: 2%;
+  padding-right: 1%;
 
   button {
     border-radius:3px;
@@ -65,7 +64,10 @@ div {
   }
 
   #finishedSpan{
-    font-size:14px;
+    text-align:center;
+    font-size:10px;
+    font-weight:500;
+    max-width:60px;
   }
 }
 
@@ -75,12 +77,12 @@ div {
 
  #toolTip {
   position:absolute;
-  bottom:39px;
-  right:-10px;
+  bottom:36px;
+  right:-5px;
   visibility:hidden;
 
   div{
-    padding-right:10px;
+    margin-right:10px;
   }
 button {
 margin:0;
@@ -89,7 +91,6 @@ height:30px;
 border-radius:50%;
 border:0;
 background-color:transparent;
-
 
 }
 }
@@ -111,7 +112,10 @@ ${(props) => props.checked === true
 
      animation: ${checkAnimated} 1s linear ;
      :hover {
-        background-color: ${shade(0.2, '#59a36a')};
+        background-color: #59a36a;
+        #checkIcon{
+      color: #E9e8e9;
+      }
         #toolTip {
         visibility:visible;
         color: #E9e8e9;
@@ -119,7 +123,7 @@ ${(props) => props.checked === true
 
       #closeIcon {
         opacity:1;
-       color: #222;
+       color: #e9e8e9;
      }
 
     }
@@ -130,10 +134,10 @@ ${(props) => props.checked === true
 ${(props) => props.checked === false
     && css`
     :hover {
-      background-color: ${shade(0.2, '#cf313a')};
+      background-color: #bf535a;
       #closeIcon {
         opacity:1;
-       color: #222;
+       color: #E9e8e9;
      }
      #toolTip {
         visibility:visible;

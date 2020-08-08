@@ -8,13 +8,22 @@ interface ToolTipProps {
   title:string;
 }
 const ToolTip: React.FC<ToolTipProps> = ({
-  children, createdAt, finishedAt, title,
+  children, createdAt, title, finishedAt,
 
 }) => {
-  const date = createdAt ? format(new Date(createdAt), 'dd-MMM-yyyy HH:mm:ss') : '';
+  const createdDate = createdAt ? `${format(new Date(createdAt), 'dd/MMM/yyyy HH:mm:ss')} ` : '';
+  const finishDate = finishedAt ? `${format(new Date(finishedAt), 'dd/MMM/yyyy HH:mm:ss')} ` : '';
+
   return (
     <Container>
-      <span>{`${title}  ${date}`}</span>
+
+      <span>
+        {title}
+        <br />
+        {createdDate}
+        <br />
+        {finishDate ? `Concluída: ${finishDate}` : ''}
+      </span>
 
       {children}
     </Container>

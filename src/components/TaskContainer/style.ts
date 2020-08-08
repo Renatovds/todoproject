@@ -10,7 +10,7 @@ padding:0 2px 10px 2px;
 
 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
 border-radius:5px;
-background-color:#e9eced;
+background-color:#f5f5f5;
 
 @media (max-width: 770px) {
 

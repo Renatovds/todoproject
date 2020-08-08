@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container } from './style';
 import Task from './Task';
 import { TaskDataProps } from '../../hooks/taskData';
@@ -18,7 +18,6 @@ const TaskContainer:React.FC<TaskContainerProps> = ({ toDos }) => (
     {toDos.map((element) => (
       <Task
         key={element.id}
-        checked={element.checked}
         id={element.id}
         toDo={element.toDo}
         createdAt={element.createdAt}

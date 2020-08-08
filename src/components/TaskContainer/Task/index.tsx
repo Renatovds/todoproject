@@ -10,27 +10,23 @@ import { useTask, TaskDataProps } from '../../../hooks/taskData';
 import ToolTip from '../../Tooltip';
 
 const Task: React.FC<TaskDataProps> = ({
-  toDo, checked = false, id, createdAt, finishedAt,
+  toDo, id, createdAt, finishedAt,
 }) => {
-  const [checkedState, setCheckedState] = useState(checked);
   const [stateToDo, setToDo] = useState(toDo);
   const { updateTask, tasks, removeTask } = useTask();
   const [finishDate, setFinishDate] = useState(finishedAt);
 
   const inputRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
-    const newDate = () => (checkedState ? new Date() : undefined);
-
     const task = {
       id,
-      checked: checkedState,
       toDo: stateToDo,
       createdAt,
-      finishedAt: newDate(),
+      finishedAt: finishDate,
     };
     updateTask(task);
     localStorage.setItem('@ToDos:task', JSON.stringify(tasks));
-  }, [checkedState, id, tasks, updateTask, toDo, stateToDo, createdAt]);
+  }, [id, tasks, updateTask, toDo, stateToDo, createdAt, finishDate]);
 
   const handleInputEdit = useCallback(() => {
     if (inputRef.current) {
@@ -48,10 +44,6 @@ const Task: React.FC<TaskDataProps> = ({
     }
   }, []);
 
-  // const handleCheckButton = useCallback(() => {
-
-  // }, [id, tasks, updateTask]);
-
   const icons = {
 
     check: <FiCheck id="checkIcon" size={30} />,
@@ -60,22 +52,16 @@ const Task: React.FC<TaskDataProps> = ({
   };
 
   return (
-    <Container checked={checkedState}>
+    <Container checked={!!finishDate}>
+
       <div>
-        <button onClick={() => setCheckedState(!checkedState)} type="button">
-          {checkedState ? icons.check : ''}
+        <button onClick={() => setFinishDate(!finishDate ? new Date() : undefined)} type="button">
+          {finishDate ? icons.check : ''}
         </button>
       </div>
-      <div>
-        {checkedState ? (
-          <span id="finishedSpan">
 
-            {finishDate}
-          </span>
-        ) : ''}
-      </div>
       <div id="toolTip">
-        <ToolTip createdAt={createdAt} title="Tarefa criada em: ">{icons.info}</ToolTip>
+        <ToolTip createdAt={createdAt} finishedAt={finishDate} title="Tarefa criada: ">{icons.info}</ToolTip>
         <button onClick={() => removeTask(id)} type="button">
           <ToolTip title="Excluir tarefa"><FiXCircle id="closeIcon" size={20} /></ToolTip>
         </button>

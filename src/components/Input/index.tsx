@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import { Form } from 'unform';
 import { v4 } from 'uuid';
+import { BsPencil } from 'react-icons/bs';
 import { Container } from './style';
 import { useTask } from '../../hooks/taskData';
 
@@ -23,7 +24,7 @@ const Input:React.FC = () => {
     <Container>
       <Form onSubmit={HandleSubmit}>
 
-        <input ref={inputRef} placeholder="Digite a tarefa..." />
+        <input ref={inputRef} placeholder="Nova tarefa..." />
       </Form>
 
     </Container>
