@@ -2,14 +2,14 @@ import { createGlobalStyle } from 'styled-components';
 import background from '../assets/back.svg';
 
 export default createGlobalStyle`
+
 *{
   margin: 0;
   padding:0;
   box-sizing:border-box;
   outline:0;
-
-
 }
+
 body {
 display:flex;
 flex:1;
@@ -18,7 +18,6 @@ flex:1;
 
   color: #12102e;
   -webkit-font-smoothing:antialiased;
-
 }
 
 body, input, button {
