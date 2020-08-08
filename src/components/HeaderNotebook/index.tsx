@@ -14,6 +14,7 @@ const ContentHeader:React.FC = () => (
       <Wire />
     </Hole>
     <Hole>
+
       <Wire />
     </Hole>
     <Hole>
