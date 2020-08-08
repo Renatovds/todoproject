@@ -1,44 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+    To do List ✔
+</h1>
 
-## Available Scripts
+<h1>
+    <img src="https://ik.imagekit.io/uw75yevtfg/todo_up9b47ENr.gif">
+</h1>
 
-In the project directory, you can run:
+<h3 align="center">
+    <a href="https://todoproject.vercel.app">Acessar a demonstração ⚙</a>
+<h3 >
 
-### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🔖&nbsp; Sobre
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+  O Projeto **To do List** é uma lista de tarefas simples, utilizada diretamente no navegador, as tarefas ficam salvas mesmo com a atualização da pagina.  É um projeto pessoal com o intuito de praticar minhas habilidades com ReactJS e Typescript.
 
-### `yarn test`
+  Fique a vontade para contribuir!😀
+  Espero que lhe ajude em seus estudos ou projetos.👍🤞
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `yarn build`
+## 🚀 Tecnologias utilizadas
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- [ReactJS](https://reactjs.org)
+- [Typescript](https://www.typescriptlang.org/)
+- [Unform](https://github.com/Rocketseat/unform)
+- [Date-fns](https://date-fns.org/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+##  📁 Como baixar o projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    # Clonar o repositório
+    $ git clone https://github.com/Renatovds/todoproject
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    # Entrar no diretório
+    $ cd todoproject
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    # Instalar as dependências
+    $ yarn install
 
-## Learn More
+    # Iniciar o projeto
+    $ yarn start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Desenvolvido por Renato Veiga da Silva 🤟
+
+
+
+
