@@ -2,12 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   position: relative;
-
-
-
-
-
-
   span{
     width: 160px;
     background: #f8dd76;
@@ -23,9 +17,6 @@ export const Container = styled.div`
     opacity: 0;
     transition: opacity 0.3s;
     text-align:center;
-
-
-
     visibility: hidden;
 
     &::before {

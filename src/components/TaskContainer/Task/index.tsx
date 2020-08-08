@@ -6,7 +6,7 @@ import {
 } from 'react-icons/fi';
 import { Container } from './style';
 import { useTask, TaskDataProps } from '../../../hooks/taskData';
-import ToolTip from '../../Tooltip';
+import ToolTip from '../../tooltip';
 
 const Task: React.FC<TaskDataProps> = ({
   toDo, id, createdAt, finishedAt,
