@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Container } from './style';
 import Task from './Task';
 import { TaskDataProps } from '../../hooks/taskData';

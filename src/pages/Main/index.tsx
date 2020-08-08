@@ -24,9 +24,15 @@ const Main: React.FC = () => {
 
           </NoteBook>
           <footer>
-            made by:
+
             {' '}
-            <FaGithub size={40} />
+            <a href="https://github.com/Renatovds/todoproject">
+              {' '}
+              <span>Renato Veiga</span>
+              {'  '}
+
+              <FaGithub size={30} />
+            </a>
           </footer>
         </Background>
       </BrowserRouter>

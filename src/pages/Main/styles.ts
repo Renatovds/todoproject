@@ -26,13 +26,13 @@ h1{
 }
 footer {
   position:absolute;
-  right:10px;
+  right:5px;
   top: 10px;
   height:8px;
   font-size:12px;
 
-  svg{
-    max-inline-size:20px;
+  span{
+    visibility: hidden;
   }
 }
 }
@@ -63,7 +63,18 @@ footer {
   right:20px;
   top: 10px;
 
+a{
+  display:flex;
+  justify-content:center;
+  text-decoration:none;
+  color: #000;
+  align-items:center;
 
+svg{
+  padding-left:5px;
+}
+
+}
 }
 
 

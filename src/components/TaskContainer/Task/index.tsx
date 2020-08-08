@@ -1,7 +1,6 @@
 import React, {
   useState, useRef, useEffect, useCallback,
 } from 'react';
-import { format } from 'date-fns';
 import {
   FiInfo, FiXCircle, FiCheck,
 } from 'react-icons/fi';
