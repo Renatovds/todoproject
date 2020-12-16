@@ -28,6 +28,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [Typescript](https://www.typescriptlang.org/)
 - [Unform](https://github.com/Rocketseat/unform)
 - [Date-fns](https://date-fns.org/)
+- [Styled-components](https://github.com/styled-components/styled-components)
 
 ---
 
